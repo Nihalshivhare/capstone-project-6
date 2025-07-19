@@ -1,0 +1,39 @@
+{
+    "rules": [
+        {
+            "rule_id": 1,
+            "description": "High value transfer",
+            "field": "amount",
+            "threshold": 10000,
+            "type": "amount"
+        },
+        {
+            "rule_id": 2,
+            "description": "Location mismatch",
+            "field": "location",
+            "type": "location"
+        },
+        {
+            "rule_id": 3,
+            "description": "Multiple failed attempts",
+            "field": "status",
+            "threshold": 3,
+            "type": "velocity"
+        },
+        {
+            "rule_id": 4,
+            "description": "Foreign currency",
+            "field": "currency",
+            "type": "currency",
+            "allowed": [
+                "USD"
+            ]
+        },
+        {
+            "rule_id": 5,
+            "description": "Unusual merchant",
+            "field": "merchant",
+            "type": "anomaly"
+        }
+    ]
+}
